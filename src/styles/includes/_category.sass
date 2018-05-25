@@ -1,0 +1,54 @@
+.page-tab
+	margin: 0 0 30px
+	padding: 0
+	background: none
+	border: none
+	+bor-rad(0)
+	+flexbox
+	justify-content: center
+	align-items: center
+	align-content: center
+	+media-breakpoint-down(lg)
+		display: block
+		text-align: center
+		white-space: nowrap
+		overflow: auto
+	li, .nav-item
+		margin: 0
+		padding: 0
+		background: none
+		border: none
+		+bor-rad(0)
+		+transition(all,0s)
+		+media-breakpoint-down(lg)
+			display: inline-block
+		+ li, + .nav-item
+			margin-left: 10px
+		a, .nav-link
+			+bor-rad(50px)
+			border: none
+			margin: 0
+			padding: 5px 20px
+			+fs(12rem)
+			line-height: 20px
+			font-weight: 600
+			text-transform: uppercase
+			color: $main
+			background: darken($white,6%)
+			+transition(all,0.3s)
+			&:hover
+				color: $orange
+			&.active, &.mPS2id-highlight
+				background: $orange
+				color: $white
+		&.active
+			a, .nav-link
+				background: $orange
+				color: $white
+
+.top-nav
+	padding: 20px 0
+	.home-tab
+		padding: 10px 15px
+		margin: 0
+		background: $white

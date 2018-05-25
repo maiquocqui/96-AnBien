@@ -1,0 +1,73 @@
+header
+	background: $black
+	+pos(abs, 0 0 null 0)
+	z-index: 1000
+	+transition(all,0.5s)
+	&.hidden
+		+pos(fix, 0 0 null 0)
+		+transform(translateY(-100%))
+	&.minimal
+		+transform(translateY(0))
+		.sitelogo
+			+pos(static,unset)
+			+flexbox
+			justify-content: center
+			align-items: center
+			img
+				height: 70px
+	.header-wrap
+		+flexbox
+		justify-content: center
+		+pos(rel,null)
+	.sitelogo
+		+pos(abs, 110px null null 0)
+	.col-right
+		flex: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+		height: 80px
+	.menu
+		ul.menu-link
+			+flexbox
+			> li
+				+ li
+					margin-left: 50px
+				> a
+					display: block
+					+fs(16rem)
+					font-weight: 600
+					color: $white
+					line-height: 20px
+					text-transform: uppercase
+				&:hover
+					> a
+						color: $yellow
+				&.active
+					> a
+						color: $yellow
+	.language
+		margin-left: 50px
+		.dropdown-toggle
+			+fs(16rem)
+			text-transform: uppercase
+			color: $white
+			line-height: 1
+			&:after
+				content: '\f107'
+				border: none
+				width: auto
+				height: auto
+				display: inline-block
+				vertical-align: middle
+	.search
+		padding-left: 15px
+		margin-left: 15px
+		border-left: 1px solid $white
+		line-height: 1
+		.search-toggle
+			color: $white
+			line-height: 1
+		.search-wrap
+			display: none
