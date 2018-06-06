@@ -2,9 +2,9 @@
 
 $(document).ready(function () {
     // header script
-    // $('header').scrollToFixed({
-    //     zIndex: 1000,
-    // });
+    $('header').scrollToFixed({
+        zIndex: 1000
+    });
 
     if ($(window).width() < 1200) {}
 
@@ -188,6 +188,11 @@ $(document).ready(function () {
         }
     });
 
+    // FAQ script
+    $('.faqtitle').click(function () {
+        $(this).siblings('.faqcontent').slideToggle(300);
+    });
+
     // top nav fixed
     $('.top-nav ul').scrollToFixed({
         marginTop: 60,
@@ -200,4 +205,7 @@ $(document).ready(function () {
         // highlightClass: 'active',
         forceSingleHighlight: true
     });
+
+    // page name breadcrumb
+    $(".pagename").append($('.breadcrumb li a').eq(1).find('span').html());
 });

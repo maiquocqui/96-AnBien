@@ -1,0 +1,76 @@
+.contact-page
+	.contact-info
+		padding: 30px
+		// background: darken($white,3%)
+		border: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		.company
+			+fs(18rem)
+			text-transform: uppercase
+			font-weight: 700
+			color: $yellow
+			margin-bottom: 20px
+		ul
+			li
+				+fs(14rem)
+				color: darken($white,60%)
+				margin-bottom: 15px
+				.title
+					color: $black
+					+fs(14rem)
+					text-transform: uppercase
+					font-weight: 700
+				.btn-viewmap
+					+fs(11rem)
+					color: $red
+					&:after
+						content: '\f101'
+						margin-left: 5px
+	.contact-form
+		margin-bottom: 15px
+		.module-title
+			+fs(14rem)
+			color: darken($white,60%)
+			margin-bottom: 10px
+	.form-wrap
+		.form-group
+			+pos(rel,null)
+			.fa.fa-exclamation-triangle
+				+fs(0)
+				color: $red
+				+pos(abs,0.9375rem 1.5rem null null)
+				&:before
+					+fs(14rem)
+					font-family: 'fontawesome'
+		input, textarea
+			@extend .form-control
+			+fs(14rem)
+			font-weight: 500
+			color: darken($white,60%)
+			line-height: 16px
+			padding: 0.9375rem 1.5rem
+			background: darken($white,3%)
+			+bor-rad(3px)
+			border: 1px solid darken($white,10%)
+			&:focus
+				background: $white
+				box-shadow: 0 0 0 0.2rem color-rgba($red,0.5)
+				border-color: $red
+		textarea
+			min-height: 200px
+		.frm-btn
+			text-align: right
+			width: 100%
+			padding: 0px
+		input[type="submit"]
+			background: $yellow
+			+fs(14rem)
+			line-height: 16px
+			font-weight: 600
+			color: $main
+			+bor-rad(3px)
+			padding: 0.9375rem 3rem
+			width: auto
+			border: none
+			text-transform: uppercase
+			display: inline-block

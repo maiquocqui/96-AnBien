@@ -1,4 +1,4 @@
-.page-tab
+.home-tab
 	margin: 0 0 30px
 	padding: 0
 	background: none
@@ -52,3 +52,18 @@
 		padding: 10px 15px
 		margin: 0
 		background: $white
+
+.sidebar-category
+	background: darken($white,5%)
+	margin: 40px 0
+	ul
+		li
+			a
+				display: block
+				+fs(14rem)
+				line-height: 20px
+				padding: 10px 20px
+			&.active
+				a
+					background: $yellow
+					color: $main
